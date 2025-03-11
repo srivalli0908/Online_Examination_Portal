@@ -1,0 +1,145 @@
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script type="text/javascript">
+      function regst()
+      {
+        //event.preventDefault();
+          var fn = document.getElementById("name").value;
+          var id = document.getElementById("id").value;
+          var email = document.getElementsById("email").value;
+          var number = document.getElementsById("number").value;
+          var pwd = document.getElementsById("password").value;
+          var cpwd = document.getElementsById("cpassword").value;
+  
+          if (password.length < 6) 
+          {
+            alert('Password must be at least 6 characters long.');
+            return;
+          }   
+  
+          if(pwd != cpwd){
+            alert("Password and Conform Password should be same");
+            Text.pwd="";
+            Text.cpwd="";
+          }
+  
+          if ( fn == "" || id == "" || email == "" || number == "" || pwd == "" || cpwd == "")
+          {
+            alert("Please Enter the all inputes");
+          }
+          window.location.href("sidebar.html");
+      }
+      
+  </script>
+  <title>Registration</title>
+</head>
+
+
+<body>
+<div class="max-w-4xl max-sm:max-w-lg mx-auto font-[sans-serif] p-6">
+  
+    <div class="text-center mb-12 sm:mb-16">
+      <h1 class="text-blue-600 text-3xl">Sign up into your account</h1>
+
+      <p class="mt-2">Already having account?
+        <a href="login.html" class="text-blue-500 hover:underline">Login</a>
+      </p>
+    </div>
+    
+    <form id="Regform" action="" onSubmit = "return (regst())";>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div>
+          <label class="text-gray-600 text-sm mb-2 block">Name</label>
+          <input id="name" type="text" class="bg-gray-100 w-full text-gray-800 text-sm px-4 py-3 rounded focus:bg-transparent outline-blue-500 transition-all" placeholder="Enter name" required/>
+        </div>
+        <div>
+          <label class="text-gray-600 text-sm mb-2 block">ID Number</label>
+          <input id="id" type="text" class="bg-gray-100 w-full text-gray-800 text-sm px-4 py-3 rounded focus:bg-transparent outline-blue-500 transition-all" placeholder="ID" required/>
+        </div>
+        <div>
+          <label class="text-gray-600 text-sm mb-2 block">Email Id</label>
+          <input id="email" type="text" class="bg-gray-100 w-full text-gray-800 text-sm px-4 py-3 rounded focus:bg-transparent outline-blue-500 transition-all" placeholder="Enter email" required/>
+        </div>
+        <div>
+          <label class="text-gray-600 text-sm mb-2 block">Mobile No.</label>
+          <input id="number" type="number" class="bg-gray-100 w-full text-gray-800 text-sm px-4 py-3 rounded focus:bg-transparent outline-blue-500 transition-all" placeholder="Enter mobile number" required/>
+        </div>
+        <div>
+          <label class="text-gray-600 text-sm mb-2 block">Password</label>
+          <input id="password" type="password" class="bg-gray-100 w-full text-gray-800 text-sm px-4 py-3 rounded focus:bg-transparent outline-blue-500 transition-all" placeholder="Enter password" required/>
+        </div>
+        <div>
+          <label class="text-gray-600 text-sm mb-2 block">Confirm Password</label>
+          <input id="cpassword" type="password" class="bg-gray-100 w-full text-gray-800 text-sm px-4 py-3 rounded focus:bg-transparent outline-blue-500 transition-all" placeholder="Enter confirm password" required/>
+        </div>
+
+        <!--dropdowns-->
+          <div class="grid grid-cols-4 gap-4">
+
+                <!-- Dropdown 1 -->
+                <div>
+                    <label for="dropdown1" class="text-gray-600 text-sm mb-2 block">Select Role</label>
+                    <select id="dropdown1" class="bg-gray-100 w-full text-gray-800 text-sm px-4 py-3 rounded focus:bg-transparent outline-blue-500 transition-all">
+                        <option value="1">Admin</option>
+                        <option value="2">Mentor</option>
+                        <option value="3">Student</option>
+                    </select>
+                </div>
+                
+                <!-- Dropdown 2 -->
+                <div>
+                    <label for="dropdown2" class="text-gray-600 text-sm mb-2 block">Select Degree</label>
+                    <select id="dropdown2" class="bg-gray-100 w-full text-gray-800 text-sm px-4 py-3 rounded focus:bg-transparent outline-blue-500 transition-all">
+                        <option value="1">M.Tech</option>
+                        <option value="2">MCA</option>
+                        <option value="3">B.Tech</option>
+                        <option value="4">BCA</option>
+                        <option value="5">MBA</option>
+                        <option value="6">BBA</option>
+                        <option value="7">Degree</option>
+                    </select>
+                </div>
+    
+                <!-- Dropdown 3 -->
+                <div>
+                    <label for="dropdown3" class="text-gray-600 text-sm mb-2 block">Select Branch</label>
+                    <select id="dropdown3" class="bg-gray-100 w-full text-gray-800 text-sm px-4 py-3 rounded focus:bg-transparent outline-blue-500 transition-all">
+                        <option value="X">CS</option>
+                        <option value="Y">ECE</option>
+                        <option value="Z">Agri</option>
+                    </select>
+                </div>
+    
+                <!-- Dropdown 4 -->
+                <div>
+                    <label for="dropdown4" class="text-gray-600 text-sm mb-2 block">Select Year</label>
+                    <select id="dropdown4" class="bg-gray-100 w-full text-gray-800 text-sm px-4 py-3 rounded focus:bg-transparent outline-blue-500 transition-all">
+                        <option value="1">1st</option>
+                        <option value="2">2nd</option>
+                        <option value="3">3rd</option>
+                        <option value="4">4rd</option>
+                        <option value="5">5rd</option>
+                        <option value="6">7rd</option>
+
+                    </select>
+                </div>
+    
+            </div>
+        </div>
+      
+      
+    </div>
+  </div>        
+
+      <div>
+        <button type="submit" class="mx-auto block py-3 px-6 text-sm tracking-wider rounded text-white bg-blue-600 hover:bg-blue-700 focus:outline-none">
+          Sign up
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+  
+</body>

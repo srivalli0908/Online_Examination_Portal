@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My App</title>
+    
+</head>
+
+<body class="w-full h-screen">
+    <nav
+        class="absolute top-0 left-0 w-full h-20 bg-transparent backdrop-blur-md shadow-lg flex justify-between p-5 items-center z-50">
+        <div class="mr-5">
+           <h1 class="text-xl md:text-3xl text-white font-semibold">Online Examination Portal</h1>
+        </div>
+        
+        <div class="hidden lg:flex flex gap-5">
+            <button
+                class="bg-red-500 text-white hover:bg-red-600 px-5 py-2 font-semibold rounded-lg cursor-pointer" id="loginButton">Login</button>
+            <button
+                class="border border-white text-white px-5 py-2 font-semibold rounded-lg cursor-pointer hover:opacity-80" id="regButton">SignUp</button>
+        </div>
+    </nav>
+
+    <section
+        class="relative w-full h-full flex flex-col items-center justify-center text-center px-6 lg:px-16 py-16 md:py-32">
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-cover bg-center"
+            style="background-image: url('https://strapi-assets.edvoy.com/live_article_8_essential_tips_to_succeed_in_online_exams_a3432ebfc6');">
+        </div>
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-white max-w-2xl">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+                Welcome to Our Online Examination Platform
+            </h1>
+            <p class="mt-4 text-lg md:text-xl">
+                Discover amazing features and join us today.
+            </p>
+            <div class="mt-6">
+                <a href="login.html"
+                    class="group px-6 py-3 bg-red-500 hover:bg-red-600 rounded-lg text-lg font-semibold transition inline-flex items-center">
+                    Get Started
+                    <i class="fa-solid fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!--login, Registration page-->
+    <script>
+        document.getElementById("loginButton").onclick = function () {
+            window.location.href = "login.html";
+        };
+
+        document.getElementById("regButton").onclick = function () {
+            window.location.href = "reg.html";
+        };
+    </script>

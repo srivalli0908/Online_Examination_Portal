@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-6 bg-purple-100">
+        <!-- Filter Form -->
+        <div class="mb-4 bg-white p-4 shadow-md flex items-center space-x-4">
+            <select class="p-2 border border-gray-300 rounded">
+                <option>Status</option>
+                <option>Active Exams</option>
+                <option>Inactive Exams</option>
+            </select>
+            <button class="p-2 bg-purple-500 text-white rounded">Search</button>
+        </div>
+    <div class="overflow-x-auto">
+        <table class="min-w-full bg-white border border-gray-300">
+            <thead>
+                <tr class="bg-gray-200">
+                    <th class="px-6 py-3 border-b text-left">Exam ID</th>
+                    <th class="px-6 py-3 border-b text-left">Exam Name</th>
+                    <th class="px-6 py-3 border-b text-left">Exam Posted Time</th>
+                    <th class="px-6 py-3 border-b text-left">Exam Duration</th>
+                    <th class="px-6 py-3 border-b text-left">Start Exam</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-b">
+                    <td class="px-6 py-4">1</td>
+                    <td class="px-6 py-4"></td>
+                    <td class="px-6 py-4"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

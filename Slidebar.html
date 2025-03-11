@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slidebar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { overflow: hidden; }
+        iframe { width: 100%; height: 100vh; border: none; }
+    </style>
+</head>
+<body class="h-screen flex">
+    <!-- Sidebar -->
+    <div id="sidebar" class="bg-purple-300 text-white h-full p-4 w-16 transition-all duration-300">
+        <button onclick="toggleSidebar()" class="mb-4">☰</button>
+        <div id="buttons" class="hidden">
+            <button onclick="showContent('My Profile', 'my_profile.html')" class="rounded-2xl block w-full p-2 bg-purple-400 mt-2">My Profile</button>
+            <button onclick="showContent('My Exams', 'my_exams.html')" class="rounded-2xl w-full p-2 bg-purple-400 mt-2">My Exams</button>
+            <button onclick="showContent('My Report', 'My report.html')" class="rounded-2xl w-full p-2 bg-purple-400 mt-2">My Reports</button>
+            <button onclick="showContent('Student Exam Details', 'student_exam_details.html')" class="rounded-2xl block w-full p-2 bg-purple-400 mt-2">Student Exam Details</button>
+            <button onclick="showContent('Student Details', 'student_details_table.html')" class="rounded-2xl block w-full p-2 bg-purple-400 mt-2">Student Details</button>
+            <button onclick="showContent('Exam scheduled Details', 'exam_details.html')" class="rounded-2xl  w-full p-2 bg-purple-400 mt-2">Exam Details</button>
+            <button onclick="showContent('Mentores Details', 'mentor_details_table.html')" class="rounded-2xl w-full p-2 bg-purple-400 mt-2">Mentor Details</button>
+            <button onclick="showContent('Exemination post', '')" class="rounded-2xl  w-full p-2 bg-purple-400 mt-2">Schedule Exam</button>
+        </div>
+    </div>
+    
+    <!-- Content Area -->
+    <div id="content" class="flex-1 flex flex-col items-center justify-center bg-gray-100 text-lg p-6">
+        <div id="text">Click a button to display content</div>
+        <iframe id="iframe" src="" class="hidden"></iframe>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            let sidebar = document.getElementById('sidebar');
+            let buttons = document.getElementById('buttons');
+            if (sidebar.classList.contains('w-16')) {
+                sidebar.classList.remove('w-16');
+                sidebar.classList.add('w-48');
+                buttons.classList.remove('hidden');
+            } else {
+                sidebar.classList.remove('w-48');
+                sidebar.classList.add('w-16');
+                buttons.classList.add('hidden');
+            }
+        }
+
+        function showContent(text, page) {
+            document.getElementById('text').innerText = text;
+            let iframe = document.getElementById('iframe');
+            iframe.src = page;
+            iframe.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
